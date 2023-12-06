@@ -1,18 +1,18 @@
 //complete this code
 class Rectangle {
 	constructor(width, height) {
-		this.width = width;
-		this.height = height;
+		this._width = width;
+		this._height = height;
 	}
 	get width() {
-		return this.width;
+		return this._width;
 	}
 	get height() {
-		return this.height;
+		return this._height;
 	}
 
 	getArea: function() {
-		let area = (this.width * this.height);
+		let area = (this._width * this._height);
 		return area;
 	}
 }
