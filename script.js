@@ -1,28 +1,36 @@
 //complete this code
 class Rectangle {
-	constructor(width, height) {
-		this._width = width;
-		this._height = height;
-	}
-	get width() {
-		return this._width;
-	}
-	get height() {
-		return this._height;
-	}
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
 
-	getArea: function() {
-		let area = (this._width * this._height);
-		return area;
-	}
+    // Getters for width and height
+    get width() {
+        return this._width;
+    }
+
+    get height() {
+        return this._height;
+    }
+
+    // Method to calculate and return the area of the rectangle
+    getArea() {
+        return this._width * this._height;
+    }
 }
 
+// Square class extends Rectangle
 class Square extends Rectangle {
-	Rectangle.call(this, width, height);
-	getPerimeter: function() {
-		let perimeter = 4 * this.width;
-		return perimeter;
-	}
+    constructor(side) {
+        // Call the constructor of the parent class (Rectangle)
+        super(side, side);
+    }
+
+    // Method to calculate and return the perimeter of the square
+    getPerimeter() {
+        return 4 * this.width;
+    }
 }
 
 // Do not change the code below this line
